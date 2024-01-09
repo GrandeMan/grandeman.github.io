@@ -13,7 +13,7 @@ const InfiniteScroll = () => {
 				x-ref="logos"
 				className=" [&_li]:mx-8 [&_h1] animate-infinite-scroll"
 			>
-				<li className="flex gap-6">
+				<li className="flex gap-6 text-black/50">
 					<h1 className="max-w-xs overflow-hidden whitespace-nowrap font-medium text-xl">
 						&bull; Site Under Construction&nbsp;
 					</h1>
