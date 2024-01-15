@@ -13,6 +13,7 @@ function App() {
 					src="../11_icon.svg"
 					alt="Under Construction"
 				/>
+
 				<h1 className="text-xl text-center font-normal">
 					<span className="text-3xl font-bold">Hi!</span>
 					<br /> I&rsquo;m working on changes to my site, but you can
