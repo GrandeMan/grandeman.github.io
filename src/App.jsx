@@ -1,4 +1,5 @@
 import InfiniteScroll from "./components/InfScroll";
+import Loading from "./components/Loading";
 import "./index.css";
 
 function App() {
@@ -6,14 +7,16 @@ function App() {
 		<div className="bg-gradient-to-tr from-orange-600 to-red-600 w-full h-full flex flex-col justify-between items-center">
 			<InfiniteScroll />
 			<div className="flex flex-col gap-8 px-4 justify-center items-center">
-				<img
+				{/* <img
 					width={60}
 					height={60}
 					className="animate-bounce "
 					src="../11_icon.svg"
 					alt="Under Construction"
-				/>
-
+				/> */}
+				<div className=" animate-bounce">
+					<Loading width={75} height={75} />
+				</div>
 				<h1 className="text-xl text-center font-normal">
 					<span className="text-3xl font-bold">Hi!</span>
 					<br /> I&rsquo;m working on changes to my site, but you can
