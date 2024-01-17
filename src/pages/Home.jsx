@@ -142,6 +142,7 @@ export default function Home() {
 										<Typist.Backspace count={14} />
 										<Typist.Delay ms={200} />
 										arti
+										<Typist.Delay ms={400} />
 										<Typist.Backspace count={5} />
 										<Typist.Delay ms={200} />
 										n artist.
