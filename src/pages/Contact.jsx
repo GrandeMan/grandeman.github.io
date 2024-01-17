@@ -65,15 +65,27 @@ export default function Contact() {
 					{/* </div> */}
 				</nav>
 			</header>
-			<main className="flex-grow">
-				<div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+			<main
+				className={`flex flex-col px-6 lg:px-8 ${
+					darkMode ? "bg-stone-950" : "bg-white"
+				} `}
+			>
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:py-16 lg:px-8">
 					<div className="max-w-3xl mx-auto text-center">
-						<h2 className="text-3xl font-extrabold text-gray-900 dark:text-orange-50 sm:text-4xl">
+						<h2
+							className={`text-3xl font-extrabold
+								text-orange-600
+							sm:text-4xl`}
+						>
 							Get in touch
 						</h2>
-						<p className="mt-4 text-lg text-gray-500 dark:text-orange-100">
-							Send me a message and I'll get back to you as soon
-							as possible.
+						<p
+							className={`mt-4 text-lg ${
+								darkMode ? "text-gray-500" : "text-gray-900"
+							}`}
+						>
+							Send me a message and I&rsquo;ll get back to you as
+							soon as possible.
 						</p>
 					</div>
 					<div className="mt-8">
@@ -84,7 +96,11 @@ export default function Contact() {
 							<div>
 								<label
 									htmlFor="first_name"
-									className="block text-sm font-medium text-gray-700 dark:text-orange-50"
+									className={`block text-sm font-medium ${
+										darkMode
+											? "text-orange-50"
+											: "text-gray-900"
+									}`}
 								>
 									First name
 								</label>
@@ -94,14 +110,22 @@ export default function Contact() {
 										name="first_name"
 										id="first_name"
 										autoComplete="given-name"
-										className="py-3 px-4 block w-full shadow-sm focus:ring-orange-500 focus:border-orange-500 border-gray-300 dark:bg-stone-900 dark:text-orange-50 dark:border-orange-500 rounded-md"
+										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
+											darkMode
+												? "bg-stone-900"
+												: "bg-white"
+										} dark:border-orange-500 rounded-md`}
 									/>
 								</div>
 							</div>
 							<div>
 								<label
 									htmlFor="last_name"
-									className="block text-sm font-medium text-gray-700 dark:text-orange-50"
+									className={`block text-sm font-medium ${
+										darkMode
+											? "text-orange-50"
+											: "text-gray-900"
+									}`}
 								>
 									Last name
 								</label>
@@ -111,14 +135,22 @@ export default function Contact() {
 										name="last_name"
 										id="last_name"
 										autoComplete="family-name"
-										className="py-3 px-4 block w-full shadow-sm focus:ring-orange-500 focus:border-orange-500 border-gray-300 dark:bg-stone-900 dark:text-orange-50 dark:border-orange-500 rounded-md"
+										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
+											darkMode
+												? "bg-stone-900"
+												: "bg-white"
+										} dark:border-orange-500 rounded-md`}
 									/>
 								</div>
 							</div>
 							<div className="sm:col-span-2">
 								<label
 									htmlFor="email"
-									className="block text-sm font-medium text-gray-700 dark:text-orange-50"
+									className={`block text-sm font-medium ${
+										darkMode
+											? "text-orange-50"
+											: "text-gray-900"
+									}`}
 								>
 									Email
 								</label>
@@ -128,14 +160,22 @@ export default function Contact() {
 										name="email"
 										type="email"
 										autoComplete="email"
-										className="py-3 px-4 block w-full shadow-sm focus:ring-orange-500 focus:border-orange-500 border-gray-300 dark:bg-stone-900 dark:text-orange-50 dark:border-orange-500 rounded-md"
+										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
+											darkMode
+												? "bg-stone-900"
+												: "bg-white"
+										} dark:border-orange-500 rounded-md`}
 									/>
 								</div>
 							</div>
 							<div className="sm:col-span-2">
 								<label
 									htmlFor="subject"
-									className="block text-sm font-medium text-gray-700 dark:text-orange-50"
+									className={`block text-sm font-medium ${
+										darkMode
+											? "text-orange-50"
+											: "text-gray-900"
+									}`}
 								>
 									Subject
 								</label>
@@ -144,31 +184,50 @@ export default function Contact() {
 										type="text"
 										name="subject"
 										id="subject"
-										className="py-3 px-4 block w-full shadow-sm focus:ring-orange-500 focus:border-orange-500 border-gray-300 dark:bg-stone-900 dark:text-orange-50 dark:border-orange-500 rounded-md"
+										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
+											darkMode
+												? "bg-stone-900"
+												: "bg-white"
+										} dark:border-orange-500 rounded-md`}
 									/>
 								</div>
 							</div>
 							<div className="sm:col-span-2">
 								<div className="flex justify-between">
 									<label
+										aria-required="true"
 										htmlFor="message"
-										className="block text-sm font-medium text-gray-700 dark:text-orange-50"
+										className={`block text-sm font-medium ${
+											darkMode
+												? "text-orange-50"
+												: "text-gray-900"
+										}`}
 									>
-										Message
+										Message *
 									</label>
 									<span
 										id="message-max"
-										className="text-sm text-gray-500 dark:text-orange-100"
+										className={`text-sm font-light ${
+											darkMode
+												? "text-orange-50"
+												: "text-gray-900"
+										}`}
 									>
 										Max. 500 characters
 									</span>
 								</div>
-								<div className="mt-1">
+								<div className="mt-1 ">
 									<textarea
 										id="message"
 										name="message"
-										rows={4}
-										className="py-3 px-4 block w-full shadow-sm focus:ring-orange-500 focus:border-orange-500 border border-gray-300 dark:bg-stone-900 dark:text-orange-50 dark:border-orange-500 rounded-md"
+										maxLength={500}
+										aria-required="true"
+										rows={10}
+										className={`resize-none py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border border-gray-300 ${
+											darkMode
+												? "bg-stone-900"
+												: "bg-white"
+										} dark:border-orange-500 rounded-md`}
 										aria-describedby="message-max"
 										defaultValue={""}
 									/>
@@ -177,7 +236,7 @@ export default function Contact() {
 							<div className="sm:col-span-2 sm:flex sm:justify-end">
 								<button
 									type="submit"
-									className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:w-auto"
+									className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:w-auto"
 								>
 									Submit
 								</button>
@@ -186,7 +245,11 @@ export default function Contact() {
 					</div>
 				</div>
 			</main>
-			<footer className="flex items-center justify-center w-full py-2">
+			<footer
+				className={`flex items-center justify-center w-full py-2 ${
+					darkMode ? "bg-stone-950" : "bg-white"
+				}`}
+			>
 				<p className={darkMode ? "text-gray-700" : "text-gray-900"}>
 					© 2024 Joshua Morales
 				</p>
