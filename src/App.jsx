@@ -1,8 +1,8 @@
-import InfiniteScroll from "./components/InfScroll";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DarkModeProvider } from "./handlers/DarkModeHandler";
 import "./index.css";
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 function App() {
 	return (
@@ -10,6 +10,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
+					<Route path="/contact" element={<Contact />} />
 				</Routes>
 			</BrowserRouter>
 		</DarkModeProvider>

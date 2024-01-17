@@ -51,7 +51,7 @@ export default function Home() {
 					{/* <div className="hidden lg:flex lg:gap-x-12"> */}
 					<div className="flex gap-4 ">
 						{navigation.map((item) => (
-							<a
+							<Link
 								key={item.name}
 								to={item.href}
 								className={`text-lg font-bold leading-6 ${
@@ -61,7 +61,7 @@ export default function Home() {
 								} hover:text-orange-600 transition-colors duration-300`}
 							>
 								{item.name}
-							</a>
+							</Link>
 						))}
 					</div>
 					<ToggleDark />
