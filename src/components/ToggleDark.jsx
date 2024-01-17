@@ -10,7 +10,7 @@ export default function ToggleDark() {
 			<Switch
 				checked={darkMode}
 				onChange={toggleDarkMode}
-				className={`${darkMode ? "bg-orange-950" : "bg-orange-600"}
+				className={`${darkMode ? "bg-orange-950/70" : "bg-orange-600"}
           relative inline-flex h-[28px] w-[52px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white/75`}
 			>
 				<span className="sr-only">Toggle dark mode</span>

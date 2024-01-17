@@ -53,7 +53,7 @@ export default function Home() {
 							<a
 								key={item.name}
 								href={item.href}
-								className={`text-md font-bold leading-6 ${
+								className={`text-lg font-bold leading-6 ${
 									darkMode
 										? "text-orange-50"
 										: "text-gray-900"
@@ -122,10 +122,9 @@ export default function Home() {
 								<span
 									className={darkMode ? "text-orange-50" : ""}
 								>
-									Hi, I&rsquo;m Joshua
+									Hi, I&rsquo;m Joshua,
 								</span>
 								<span className={"text-orange-600"}>
-									,
 									<Typist
 										typingDelay={100}
 										loop={true}
@@ -133,20 +132,20 @@ export default function Home() {
 											<span className="font-thin">|</span>
 										}
 									>
-										&nbsp;a graphic designer
+										&nbsp;a graphic designer.
 										<Typist.Delay ms={1000} />
-										<Typist.Backspace count={16} />
+										<Typist.Backspace count={17} />
 										<Typist.Delay ms={200} />
-										web developer
+										web developer.
 										<Typist.Delay ms={1000} />
-										<Typist.Backspace count={13} />
+										<Typist.Backspace count={14} />
 										<Typist.Delay ms={200} />
 										arti
 										<Typist.Backspace count={5} />
 										<Typist.Delay ms={200} />
-										n artist
+										n artist.
 										<Typist.Delay ms={1000} />
-										<Typist.Backspace count={16} />
+										<Typist.Backspace count={10} />
 										<Typist.Delay ms={200} />
 									</Typist>
 								</span>
@@ -170,8 +169,8 @@ export default function Home() {
 									className={`${
 										darkMode ? "invert opacity-50" : ""
 									}`}
-									width={50}
-									height={50}
+									width={40}
+									height={40}
 									src="../github-icon.svg"
 									alt="GitHub"
 								/>
@@ -192,8 +191,8 @@ export default function Home() {
 									className={`${
 										darkMode ? "invert opacity-50 " : ""
 									}`}
-									width={100}
-									height={100}
+									width={90}
+									height={90}
 									src="../behance.svg"
 									alt="Behance"
 								/>

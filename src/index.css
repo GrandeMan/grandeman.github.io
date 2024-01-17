@@ -53,6 +53,14 @@
 @layer base {
 	html {
 		font-family: "GeistSans", sans-serif;
+
+		-webkit-font-smoothing: antialiased;
+		-webkit-user-drag: none;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		scroll-behavior: smooth;
 	}
 }
 
