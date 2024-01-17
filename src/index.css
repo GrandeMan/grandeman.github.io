@@ -55,3 +55,8 @@
 		font-family: "GeistSans", sans-serif;
 	}
 }
+
+.dm-orange {
+	filter: invert(37%) sepia(46%) saturate(3592%) hue-rotate(2deg)
+		brightness(98%) contrast(91%);
+}
