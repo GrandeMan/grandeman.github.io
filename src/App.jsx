@@ -3,8 +3,11 @@ import { DarkModeProvider } from "./handlers/DarkModeHandler";
 import "./index.css";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import { useState } from "react";
 
 function App() {
+	const [isLoading, setIsLoading] = useState(true);
+
 	return (
 		<DarkModeProvider>
 			<BrowserRouter>

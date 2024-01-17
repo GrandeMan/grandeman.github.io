@@ -90,19 +90,21 @@ export default function Contact() {
 					</div>
 					<div className="mt-8">
 						<form
-							action="#"
+							method="POST"
+							action="https://formspree.io/f/xqkrawag"
 							className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
 						>
 							<div>
 								<label
 									htmlFor="first_name"
+									aria-required="true"
 									className={`block text-sm font-medium ${
 										darkMode
 											? "text-orange-50"
 											: "text-gray-900"
 									}`}
 								>
-									First name
+									First name *
 								</label>
 								<div className="mt-1">
 									<input
@@ -110,6 +112,7 @@ export default function Contact() {
 										name="first_name"
 										id="first_name"
 										autoComplete="given-name"
+										required={true}
 										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
 											darkMode
 												? "bg-stone-900"
@@ -146,13 +149,14 @@ export default function Contact() {
 							<div className="sm:col-span-2">
 								<label
 									htmlFor="email"
+									aria-required="true"
 									className={`block text-sm font-medium ${
 										darkMode
 											? "text-orange-50"
 											: "text-gray-900"
 									}`}
 								>
-									Email
+									Email *
 								</label>
 								<div className="mt-1">
 									<input
@@ -160,6 +164,7 @@ export default function Contact() {
 										name="email"
 										type="email"
 										autoComplete="email"
+										required={true}
 										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
 											darkMode
 												? "bg-stone-900"
@@ -221,7 +226,7 @@ export default function Contact() {
 										id="message"
 										name="message"
 										maxLength={500}
-										aria-required="true"
+										required={true}
 										rows={10}
 										className={`resize-none py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border border-gray-300 ${
 											darkMode
