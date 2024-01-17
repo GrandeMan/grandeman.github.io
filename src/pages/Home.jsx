@@ -18,9 +18,9 @@ export default function Home() {
 		<div
 			className={`${
 				darkMode ? "bg-stone-950" : "bg-white"
-			} w-full h-full`}
+			} w-full h-full flex flex-col justify-between`}
 		>
-			<header className="absolute inset-x-0 top-0 z-50">
+			<header>
 				<nav
 					className="flex items-center justify-between p-6"
 					aria-label="Global"
@@ -113,8 +113,8 @@ export default function Home() {
 				</Dialog>
 			</header>
 
-			<div className="flex flex-col px-6 pt-14 lg:px-8">
-				<div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+			<div className="flex flex-col px-6 lg:px-8">
+				<div className="mx-auto max-w-4xl">
 					<div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
 					<div className="text-center">
 						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -177,13 +177,13 @@ export default function Home() {
 								/>
 							</a>
 							{/* <a href="" className="text-2xl">
-						<img
+						    <img
 							width={50}
 							height={50}
 							src="../linkedin.svg"
 							alt="LinkedIn"
-						/>
-					</a> */}
+						    />
+					        </a> */}
 							<a
 								href="https://www.behance.net/joshuajmorales__"
 								className="hover:opacity-75 transition-opacity duration-300"
@@ -202,6 +202,11 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			<footer className="flex items-center justify-center w-full py-2">
+				<p className={darkMode ? "text-gray-700" : "text-gray-900"}>
+					© 2024 Joshua Morales
+				</p>
+			</footer>
 		</div>
 	);
 }
