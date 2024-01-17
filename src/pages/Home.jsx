@@ -4,10 +4,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Typist from "react-typist-component";
 import ToggleDark from "../components/ToggleDark";
 import { useDarkMode } from "../handlers/DarkModeHandler";
+import { Link } from "react-router-dom";
 
 const navigation = [
-	{ name: "Home", href: "#" },
-	{ name: "Contact", href: "#" },
+	{ name: "Home", href: "/" },
+	{ name: "Contact", href: "/contact" },
 ];
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
 					aria-label="Global"
 				>
 					<div>
-						<a href="#" className="-m-1.5 p-1.5">
+						<Link to="/" className="-m-1.5 p-1.5">
 							<span className="sr-only">Joshua Morales</span>
 							<img
 								className={`h-8 w-auto ${
@@ -35,7 +36,7 @@ export default function Home() {
 								src="./11_icon.svg"
 								alt="Joshua Morales logo"
 							/>
-						</a>
+						</Link>
 					</div>
 					{/* <div className="flex lg:hidden">
 						<button
@@ -52,7 +53,7 @@ export default function Home() {
 						{navigation.map((item) => (
 							<a
 								key={item.name}
-								href={item.href}
+								to={item.href}
 								className={`text-lg font-bold leading-6 ${
 									darkMode
 										? "text-orange-50"
