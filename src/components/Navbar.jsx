@@ -14,7 +14,7 @@ const navigation = [
 
 export default function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const { darkMode, _ } = useDarkMode();
+	const { darkMode } = useDarkMode();
 	return (
 		<>
 			<header>

@@ -9,12 +9,11 @@ export default function Home() {
 		<div
 			className={`${
 				darkMode ? "bg-stone-950" : "bg-white"
-			} w-full h-full pt-24 pb-4 flex flex-col justify-between`}
+			} w-full h-full pt-24 pb-4 flex flex-col justify-center`}
 		>
 			<div className="flex flex-col px-6 lg:px-8">
-				<div className="mx-auto max-w-4xl">
-					<div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
-					<div className="text-center">
+				<div className="mx-auto w-4/5">
+					<div className="text-center ">
 						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
 							<span className="block xl:inline">
 								<span
@@ -103,3 +102,4 @@ export default function Home() {
 		</div>
 	);
 }
+// Todo: Add tech stack and testimonials to home page
