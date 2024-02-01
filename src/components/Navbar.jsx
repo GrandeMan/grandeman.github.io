@@ -19,7 +19,9 @@ export default function Navbar() {
 		<>
 			<header>
 				<nav
-					className="flex items-center justify-between p-6"
+					className={`${
+						darkMode ? "bg-stone-950" : "bg-white"
+					} flex items-center justify-between p-6 z-10 top-0 absolute w-full h-20 bg-opacity-20 backdrop-blur-sm drop-shadow-md`}
 					aria-label="Global"
 				>
 					<div>
@@ -109,7 +111,7 @@ export default function Navbar() {
 					</Dialog.Panel>
 				</Dialog>
 			</header>
-			<main>
+			<main className="h-full">
 				<Outlet />
 			</main>
 		</>

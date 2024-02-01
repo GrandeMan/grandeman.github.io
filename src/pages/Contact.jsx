@@ -3,11 +3,6 @@ import ToggleDark from "../components/ToggleDark";
 import { useState } from "react";
 import { useDarkMode } from "../handlers/DarkModeHandler";
 
-const navigation = [
-	{ name: "Home", href: "/" },
-	{ name: "Contact", href: "/contact" },
-];
-
 export default function Contact() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const { darkMode, toggleDarkMode } = useDarkMode();
@@ -16,56 +11,9 @@ export default function Contact() {
 		<div
 			className={`${
 				darkMode ? "bg-stone-950" : "bg-white"
-			} w-full h-full flex flex-col justify-between`}
+			} w-full h-full pt-24 pb-4 flex flex-col justify-between`}
 		>
-			<header>
-				<nav
-					className="flex items-center justify-between p-6"
-					aria-label="Global"
-				>
-					<div>
-						<Link to="/" className="-m-1.5 p-1.5">
-							<span className="sr-only">Joshua Morales</span>
-							<img
-								className={`h-8 w-auto ${
-									darkMode ? "dm-orange" : ""
-								}`}
-								src="./11_icon.svg"
-								alt="Joshua Morales logo"
-							/>
-						</Link>
-					</div>
-					{/* <div className="flex lg:hidden">
-                        <button
-                            type="button"
-                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                            onClick={() => setMobileMenuOpen(true)}
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                        </button>
-                    </div> */}
-					{/* <div className="hidden lg:flex lg:gap-x-12"> */}
-					<div className="flex gap-4 ">
-						{navigation.map((item) => (
-							<Link
-								key={item.name}
-								to={item.href}
-								className={`text-lg font-bold leading-6 ${
-									darkMode
-										? "text-orange-50"
-										: "text-gray-900"
-								} hover:text-orange-600 transition-colors duration-300`}
-							>
-								{item.name}
-							</Link>
-						))}
-					</div>
-					<ToggleDark />
-					{/* </div> */}
-				</nav>
-			</header>
-			<main
+			<div
 				className={`flex flex-col px-6 lg:px-8 ${
 					darkMode ? "bg-stone-950" : "bg-white"
 				} `}
@@ -104,7 +52,14 @@ export default function Contact() {
 											: "text-gray-900"
 									}`}
 								>
-									First name *
+									First name
+									<span className="text-orange-500">
+										{" "}
+										<span className="text-orange-500">
+											{" "}
+											*
+										</span>
+									</span>
 								</label>
 								<div className="mt-1">
 									<input
@@ -156,7 +111,8 @@ export default function Contact() {
 											: "text-gray-900"
 									}`}
 								>
-									Email *
+									Email{" "}
+									<span className="text-orange-500"> *</span>
 								</label>
 								<div className="mt-1">
 									<input
@@ -208,7 +164,11 @@ export default function Contact() {
 												: "text-gray-900"
 										}`}
 									>
-										Message *
+										Message{" "}
+										<span className="text-orange-500">
+											{" "}
+											*
+										</span>
 									</label>
 									<span
 										id="message-max"
@@ -249,16 +209,7 @@ export default function Contact() {
 						</form>
 					</div>
 				</div>
-			</main>
-			<footer
-				className={`flex items-center justify-center w-full py-2 ${
-					darkMode ? "bg-stone-950" : "bg-white"
-				}`}
-			>
-				<p className={darkMode ? "text-gray-700" : "text-gray-900"}>
-					© 2024 Joshua Morales
-				</p>
-			</footer>
+			</div>
 		</div>
 	);
 }
