@@ -4,49 +4,49 @@
 
 @font-face {
 	font-family: "GeistSans";
-	src: url("../fonts/Geist-UltraLight.woff2") format("woff2");
+	src: url("../public/fonts/Geist-UltraLight.woff2") format("woff2");
 	font-weight: 100;
 }
 
 @font-face {
 	font-family: "GeistSans";
-	src: url("../fonts/Geist-Light.woff2") format("woff2");
+	src: url("../public/fonts/Geist-Light.woff2") format("woff2");
 	font-weight: 200;
 }
 
 @font-face {
 	font-family: "GeistSans";
-	src: url("../fonts/Geist-Thin.woff2") format("woff2");
+	src: url("../public/fonts/Geist-Thin.woff2") format("woff2");
 	font-weight: 300;
 }
 
 @font-face {
 	font-family: "GeistSans";
-	src: url("../fonts/Geist-Regular.woff2") format("woff2");
+	src: url("../public/fonts/Geist-Regular.woff2") format("woff2");
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: "GeistSans";
-	src: url("../fonts/Geist-Medium.woff2") format("woff2");
+	src: url("../public/fonts/Geist-Medium.woff2") format("woff2");
 	font-weight: 500;
 }
 
 @font-face {
 	font-family: "GeistSans";
-	src: url("../fonts/Geist-Bold.woff2") format("woff2");
+	src: url("../public/fonts/Geist-Bold.woff2") format("woff2");
 	font-weight: 700;
 }
 
 @font-face {
 	font-family: "GeistSans";
-	src: url("../fonts/Geist-Black.woff2") format("woff2");
+	src: url("../public/fonts/Geist-Black.woff2") format("woff2");
 	font-weight: 800;
 }
 
 @font-face {
 	font-family: "GeistSans";
-	src: url("../fonts/Geist-UltraBlack.woff2") format("woff2");
+	src: url("../public/fonts/Geist-UltraBlack.woff2") format("woff2");
 	font-weight: 900;
 }
 
