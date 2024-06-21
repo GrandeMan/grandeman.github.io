@@ -1,7 +1,7 @@
 "use client";
 
-import { useDarkMode } from "../handlers/DarkModeHandler";
-import ToggleDark from "./ToggleDark";
+import useTheme from "../handlers/ThemeHandler";
+import ToggleDark from "./ToggleTheme";
 import { Dialog } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -16,13 +16,13 @@ const navigation = [
 
 export default function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const { darkMode } = useDarkMode();
+	const { theme } = useTheme();
 	return (
 		<>
 			<header>
 				<nav
 					className={`${
-						darkMode ? "bg-stone-950" : "bg-white"
+						theme === "dark" ? "bg-stone-950" : "bg-white"
 					} flex items-center justify-between p-6 z-10 top-0 absolute w-full h-20 bg-opacity-20 backdrop-blur-sm drop-shadow-md`}
 					aria-label="Global"
 				>
@@ -31,7 +31,7 @@ export default function Navbar() {
 							<span className="sr-only">Joshua Morales</span>
 							<img
 								className={`h-8 w-auto ${
-									darkMode ? "dm-orange" : ""
+									theme === "dark" ? "dm-orange" : ""
 								}`}
 								src="./11_icon.svg"
 								alt="Joshua Morales logo"
@@ -55,7 +55,7 @@ export default function Navbar() {
 								key={item.name}
 								href={item.href}
 								className={`text-lg font-bold leading-6 ${
-									darkMode
+									theme === "dark"
 										? "text-orange-50"
 										: "text-gray-900"
 								} hover:text-orange-600 transition-colors duration-300`}

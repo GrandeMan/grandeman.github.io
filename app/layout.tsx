@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
-import { DarkModeProvider } from "./handlers/DarkModeHandler";
+import { ThemeProvider } from "./handlers/ThemeHandler";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -70,11 +70,11 @@ export default function RootLayout({
 			</head>
 			<body className={`${geist.className} w-full h-full bg-orange-600`}>
 				<div className="w-full h-full" id="root">
-					<DarkModeProvider>
+					<ThemeProvider>
 						<Navbar />
 						{children}
 						<Footer />
-					</DarkModeProvider>
+					</ThemeProvider>
 				</div>
 			</body>
 		</html>

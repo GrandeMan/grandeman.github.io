@@ -1,14 +1,15 @@
 import Typist from "react-typist-component";
 
-import { useDarkMode } from "./handlers/DarkModeHandler";
+import useTheme from "./handlers/ThemeHandler";
+import Image from "next/image";
 
 export default function Home() {
-	const { darkMode } = useDarkMode();
+	const { theme } = useTheme();
 
 	return (
 		<div
 			className={`${
-				darkMode ? "bg-stone-950" : "bg-white"
+				theme === "dark" ? "bg-stone-950" : "bg-white"
 			} w-full h-full pt-24 pb-4 flex flex-col justify-center`}
 		>
 			<div className="flex flex-col px-6 lg:px-8">
@@ -17,7 +18,9 @@ export default function Home() {
 						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
 							<span className="block xl:inline">
 								<span
-									className={darkMode ? "text-orange-50" : ""}
+									className={
+										theme === "dark" ? "text-orange-50" : ""
+									}
 								>
 									Hi, I&rsquo;m Joshua,
 								</span>
@@ -51,7 +54,9 @@ export default function Home() {
 						</h1>
 						<p
 							className={`mt-6 text-lg leading-8 ${
-								darkMode ? "text-gray-500" : "text-gray-600"
+								theme === "dark"
+									? "text-gray-500"
+									: "text-gray-600"
 							}`}
 						>
 							I&rsquo;m currently working on some changes, but you
@@ -63,9 +68,11 @@ export default function Home() {
 								href="https://github.com/GrandeMan"
 								className="hover:opacity-75 transition-opacity duration-300"
 							>
-								<img
+								<Image
 									className={`${
-										darkMode ? "invert opacity-50" : ""
+										theme === "dark"
+											? "invert opacity-50"
+											: ""
 									}`}
 									width={40}
 									height={40}
@@ -85,9 +92,11 @@ export default function Home() {
 								href="https://www.behance.net/joshuajmorales__"
 								className="hover:opacity-75 transition-opacity duration-300"
 							>
-								<img
+								<Image
 									className={`${
-										darkMode ? "invert opacity-50 " : ""
+										theme === "dark"
+											? "invert opacity-50 "
+											: ""
 									}`}
 									width={90}
 									height={90}

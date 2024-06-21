@@ -1,20 +1,20 @@
-import ToggleDark from "../components/ToggleDark";
+import ToggleDark from "../components/ToggleTheme";
 import { useState } from "react";
-import { useDarkMode } from "../handlers/DarkModeHandler";
+import useTheme from "../handlers/ThemeHandler";
 
 export default function Contact() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-	const { darkMode, toggleDarkMode } = useDarkMode();
+	const { theme, toggleTheme } = useTheme();
 
 	return (
 		<div
 			className={`${
-				darkMode ? "bg-stone-950" : "bg-white"
+				theme === "dark" ? "bg-stone-950" : "bg-white"
 			} w-full h-full pt-24 pb-4 flex flex-col justify-between`}
 		>
 			<div
 				className={`flex flex-col px-6 lg:px-8 ${
-					darkMode ? "bg-stone-950" : "bg-white"
+					theme === "dark" ? "bg-stone-950" : "bg-white"
 				} `}
 			>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -28,7 +28,9 @@ export default function Contact() {
 						</h2>
 						<p
 							className={`mt-4 text-lg ${
-								darkMode ? "text-gray-500" : "text-gray-900"
+								theme === "dark"
+									? "text-gray-500"
+									: "text-gray-900"
 							}`}
 						>
 							Send me a message and I&rsquo;ll get back to you as
@@ -46,7 +48,7 @@ export default function Contact() {
 									htmlFor="first_name"
 									aria-required="true"
 									className={`block text-sm font-medium ${
-										darkMode
+										theme === "dark"
 											? "text-orange-50"
 											: "text-gray-900"
 									}`}
@@ -68,7 +70,7 @@ export default function Contact() {
 										autoComplete="given-name"
 										required={true}
 										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
-											darkMode
+											theme === "dark"
 												? "bg-stone-900"
 												: "bg-white"
 										} dark:border-orange-500 rounded-md`}
@@ -79,7 +81,7 @@ export default function Contact() {
 								<label
 									htmlFor="last_name"
 									className={`block text-sm font-medium ${
-										darkMode
+										theme === "dark"
 											? "text-orange-50"
 											: "text-gray-900"
 									}`}
@@ -93,7 +95,7 @@ export default function Contact() {
 										id="last_name"
 										autoComplete="family-name"
 										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
-											darkMode
+											theme === "dark"
 												? "bg-stone-900"
 												: "bg-white"
 										} dark:border-orange-500 rounded-md`}
@@ -105,7 +107,7 @@ export default function Contact() {
 									htmlFor="email"
 									aria-required="true"
 									className={`block text-sm font-medium ${
-										darkMode
+										theme === "dark"
 											? "text-orange-50"
 											: "text-gray-900"
 									}`}
@@ -121,7 +123,7 @@ export default function Contact() {
 										autoComplete="email"
 										required={true}
 										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
-											darkMode
+											theme === "dark"
 												? "bg-stone-900"
 												: "bg-white"
 										} dark:border-orange-500 rounded-md`}
@@ -132,7 +134,7 @@ export default function Contact() {
 								<label
 									htmlFor="subject"
 									className={`block text-sm font-medium ${
-										darkMode
+										theme === "dark"
 											? "text-orange-50"
 											: "text-gray-900"
 									}`}
@@ -145,7 +147,7 @@ export default function Contact() {
 										name="subject"
 										id="subject"
 										className={`py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border-gray-300 ${
-											darkMode
+											theme === "dark"
 												? "bg-stone-900"
 												: "bg-white"
 										} dark:border-orange-500 rounded-md`}
@@ -158,7 +160,7 @@ export default function Contact() {
 										aria-required="true"
 										htmlFor="message"
 										className={`block text-sm font-medium ${
-											darkMode
+											theme === "dark"
 												? "text-orange-50"
 												: "text-gray-900"
 										}`}
@@ -172,7 +174,7 @@ export default function Contact() {
 									<span
 										id="message-max"
 										className={`text-sm font-light ${
-											darkMode
+											theme === "dark"
 												? "text-orange-50"
 												: "text-gray-900"
 										}`}
@@ -188,7 +190,7 @@ export default function Contact() {
 										required={true}
 										rows={10}
 										className={`resize-none py-3 px-4 block w-full shadow-md focus:ring-orange-500 focus:border-orange-500 border border-gray-300 ${
-											darkMode
+											theme === "dark"
 												? "bg-stone-900"
 												: "bg-white"
 										} dark:border-orange-500 rounded-md`}
