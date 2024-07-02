@@ -1,7 +1,7 @@
 "use client";
 
 import ToggleDark from "../components/ToggleTheme";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useTheme from "../handlers/ThemeHandler";
 
 export default function Contact() {
@@ -12,7 +12,7 @@ export default function Contact() {
 		<div
 			className={`${
 				theme === "dark" ? "bg-stone-950" : "bg-white"
-			} w-full h-full pt-24 pb-4 flex flex-col justify-between`}
+			} w-full h-full pt-24 pb-4 flex flex-col justify-center`}
 		>
 			<div
 				className={`flex flex-col px-6 lg:px-8 ${

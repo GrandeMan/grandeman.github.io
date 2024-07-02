@@ -34,6 +34,17 @@ export default function RootLayout({
 					defer
 					src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
 				></script>
+				<script
+					async
+					src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `(function () {
+        const locomotiveScroll = new LocomotiveScroll();
+    })();`,
+					}}
+				></script>
 				{/* // Single Page Apps for GitHub Pages
 			// MIT License
 			// https://github.com/rafgraph/spa-github-pages

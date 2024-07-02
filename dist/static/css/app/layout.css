@@ -398,7 +398,6 @@ video {
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
-		scroll-behavior: smooth;
 	}
 
 *, ::before, ::after {
@@ -580,6 +579,9 @@ video {
 .mt-10 {
   margin-top: 2.5rem;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -627,6 +629,9 @@ video {
 }
 .h-full {
   height: 100%;
+}
+.h-screen {
+  height: 100vh;
 }
 .w-4\/5 {
   width: 80%;
@@ -1074,6 +1079,11 @@ body {
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .sm\:text-4xl {

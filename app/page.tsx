@@ -4,17 +4,26 @@ import Typist from "react-typist-component";
 
 import useTheme from "./handlers/ThemeHandler";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Home() {
 	const { theme } = useTheme();
+
+	// useEffect(() => {
+	// 	(async () => {
+	// 		const LocomotiveScroll = (await import("locomotive-scroll"))
+	// 			.default;
+	// 		const locomotiveScroll = new LocomotiveScroll();
+	// 	})();
+	// }, []);
 
 	return (
 		<div
 			className={`${
 				theme === "dark" ? "bg-stone-950" : "bg-white"
-			} w-full h-full pt-24 pb-4 flex flex-col justify-center`}
+			} w-full pt-24 pb-4 flex flex-col justify-between`}
 		>
-			<div className="flex flex-col px-6 lg:px-8">
+			<div className="h-screen flex flex-col px-6 lg:px-8">
 				<div className="mx-auto w-4/5">
 					<div className="text-center ">
 						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -107,6 +116,36 @@ export default function Home() {
 								/>
 							</a>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div className="flex flex-col px-6 lg:px-8 h-screen">
+				<div className="mx-auto w-4/5">
+					<div className="text-center mt-12">
+						<h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+							<span className="block xl:inline">
+								<span
+									className={
+										theme === "dark" ? "text-orange-50" : ""
+									}
+								>
+									What I Do
+								</span>
+							</span>
+						</h2>
+						<p
+							className={`mt-6 text-lg leading-8 ${
+								theme === "dark"
+									? "text-gray-500"
+									: "text-gray-600"
+							}`}
+						>
+							I&rsquo;m a graphic designer and web developer with
+							a passion for creating beautiful, functional
+							designs. Whether it&rsquo;s a logo, a website, or a
+							piece of art, I strive to create something that is
+							both visually appealing and user-friendly.
+						</p>
 					</div>
 				</div>
 			</div>
