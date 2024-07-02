@@ -731,10 +731,6 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
-.border-orange-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(249 115 22 / var(--tw-border-opacity));
-}
 .border-transparent {
   border-color: transparent;
 }
@@ -799,15 +795,16 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
-}
-.pb-6 {
-  padding-bottom: 1.5rem;
 }
 .pt-24 {
   padding-top: 6rem;

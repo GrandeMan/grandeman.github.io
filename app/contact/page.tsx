@@ -1,3 +1,5 @@
+"use client";
+
 import ToggleDark from "../components/ToggleTheme";
 import { useState } from "react";
 import useTheme from "../handlers/ThemeHandler";

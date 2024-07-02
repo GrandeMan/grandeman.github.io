@@ -1,3 +1,5 @@
+"use client";
+
 import Typist from "react-typist-component";
 
 import useTheme from "./handlers/ThemeHandler";
