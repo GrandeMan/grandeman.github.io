@@ -149,6 +149,82 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			<div className="flex flex-col px-6 lg:px-8 h-screen">
+				<div className="mx-auto w-4/5">
+					<div className="text-center mt-12">
+						<h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+							<span className="block xl:inline">
+								<span
+									className={
+										theme === "dark" ? "text-orange-50" : ""
+									}
+								>
+									What I Use
+								</span>
+							</span>
+						</h2>
+						<p
+							className={`mt-6 text-lg leading-8 ${
+								theme === "dark"
+									? "text-gray-500"
+									: "text-gray-600"
+							}`}
+						>
+							I use a variety of tools and technologies to bring
+							my designs to life. From Adobe Creative Suite to
+							React.js, I&rsquo;m always learning new things and
+							experimenting with different techniques to create
+							something unique.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div className="flex flex-col px-6 lg:px-8 h-screen">
+				<div className="mx-auto w-4/5">
+					<div className="text-center mt-12">
+						<h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+							<span className="block xl:inline">
+								<span
+									className={
+										theme === "dark" ? "text-orange-50" : ""
+									}
+								>
+									Testimonials
+								</span>
+							</span>
+						</h2>
+						<p
+							className={`mt-6 text-lg leading-8 ${
+								theme === "dark"
+									? "text-gray-500"
+									: "text-gray-600"
+							}`}
+						>
+							Here&rsquo;s what some of my clients have to say
+							about my work:
+						</p>
+					</div>
+				</div>
+				<div className="flex flex-col px-6 lg:px-8 h-screen">
+					<div className="mx-auto w-4/5">
+						<div className="text-center mt-12">
+							<h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+								<span className="block xl:inline">
+									<span
+										className={
+											theme === "dark"
+												? "text-orange-50"
+												: ""
+										}
+									>
+										Contact Me
+									</span>
+								</span>
+							</h2>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }

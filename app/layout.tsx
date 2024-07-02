@@ -34,17 +34,7 @@ export default function RootLayout({
 					defer
 					src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
 				></script>
-				<script
-					async
-					src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"
-				></script>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `(function () {
-        const locomotiveScroll = new LocomotiveScroll();
-    })();`,
-					}}
-				></script>
+
 				{/* // Single Page Apps for GitHub Pages
 			// MIT License
 			// https://github.com/rafgraph/spa-github-pages
@@ -78,6 +68,28 @@ export default function RootLayout({
 					}}
 				></script>
 				{/* //End Single Page Apps for GitHub Pages */}
+				<script
+					async
+					src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"
+				></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							document.addEventListener("DOMContentLoaded", function () {
+								const scroll = new LocomotiveScroll({
+									el: document.querySelector("[data-scroll-container]"),
+									smooth: true,
+									smoothMobile: false,
+									getDirection: true,
+									inertia: 0.75,
+									repeat: true,
+								});
+							});
+						`,
+					}}
+				></script>
+
+				<style>{`html.lenis{height:auto}.lenis.lenis-smooth{scroll-behavior:auto}.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}.lenis.lenis-stopped{overflow:hidden}.lenis.lenis-scrolling iframe{pointer-events:none}`}</style>
 			</head>
 			<body className={`${geist.className} w-full h-full bg-orange-600`}>
 				<div className="w-full h-full" id="root">
