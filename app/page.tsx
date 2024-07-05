@@ -23,7 +23,7 @@ export default function Home() {
 				theme === "dark" ? "bg-stone-950" : "bg-white"
 			} w-full pt-24 pb-4 flex flex-col justify-between`}
 		>
-			<div className="h-screen flex flex-col px-6 lg:px-8">
+			<div className="h-screen flex flex-col px-6 lg:px-8 justify-center">
 				<div className="mx-auto w-4/5">
 					<div className="text-center ">
 						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -119,7 +119,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col px-6 lg:px-8 h-screen">
+			<div className="flex flex-col px-6 lg:px-8 h-screen justify-center">
 				<div className="mx-auto w-4/5">
 					<div className="text-center mt-12">
 						<h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
@@ -149,7 +149,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col px-6 lg:px-8 h-screen">
+			<div className="flex flex-col px-6 lg:px-8 h-screen justify-center">
 				<div className="mx-auto w-4/5">
 					<div className="text-center mt-12">
 						<h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
@@ -179,7 +179,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col px-6 lg:px-8 h-screen">
+			<div className="flex flex-col px-6 lg:px-8 h-screen justify-center">
 				<div className="mx-auto w-4/5">
 					<div className="text-center mt-12">
 						<h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
@@ -205,7 +205,7 @@ export default function Home() {
 						</p>
 					</div>
 				</div>
-				<div className="flex flex-col px-6 lg:px-8 h-screen">
+				<div className="flex flex-col px-6 lg:px-8 h-screen justify-center">
 					<div className="mx-auto w-4/5">
 						<div className="text-center mt-12">
 							<h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">

@@ -399,6 +399,14 @@ video {
 		-webkit-user-select: none;
 		-ms-user-select: none;
 	}
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #ffffffb0;
+		border-radius: 6px;
+	}
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
