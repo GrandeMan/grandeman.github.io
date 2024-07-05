@@ -5,6 +5,7 @@ import Typist from "react-typist-component";
 import useTheme from "./handlers/ThemeHandler";
 import Image from "next/image";
 import { useEffect } from "react";
+import ScrollToTopButton from "./components/ScrolltoTop";
 
 export default function Home() {
 	const { theme } = useTheme();
@@ -225,6 +226,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			<ScrollToTopButton />
 		</div>
 	);
 }

@@ -5,6 +5,7 @@ import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "./handlers/ThemeHandler";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ScrolltoTop";
 
 const inter = Inter({ subsets: ["latin"] });
 const geist = GeistSans;
